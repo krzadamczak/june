@@ -7,3 +7,12 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: june
 */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.page-wrapper{
+    margin: 50px 100px;
+}
