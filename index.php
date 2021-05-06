@@ -1,15 +1,13 @@
-<?php 
+<?php get_header(); ?>
 
-get_header();
+<body <?php body_class('page-wrapper'); ?>>
 
-?>
-<body class="page-wrapper">
 <?php 
 
 get_template_part('template-parts/site-header');
-    echo get_theme_file_uri('\test/style.css');
-    echo nl2br("\n\n");
-    echo get_theme_file_path('\test/style.css');
+
+get_template_part('template-parts/newest-stylizations');
+
 ?>
 </body>
 </html>

@@ -2,4 +2,4 @@
     $name = get_bloginfo('name');
 ?>
 
-<div class="header__branding"><?php echo esc_html($name) ?></div>
+<a class="header__branding" href="<?php echo home_url();?>"><?php echo esc_html($name) ?></a>

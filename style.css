@@ -8,11 +8,72 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: june
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Playfair+Display&display=swap');
+
+:root{
+    --main-font: 'Cabin';
+    --second-font: 'Playfair Display';
+    --tiny: 18px;
+    --small: 24px;
+    --medium: 36px;
+    --large: 48px;
+    --massive: 72px;
+    --main-color: #000;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 .page-wrapper{
-    margin: 50px 100px;
+    margin: 25px 100px;
+}
+.header{
+    display: flex;
+    padding: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__branding{
+    font-family: var(--main-font);
+    font-size: var(--medium);
+    text-decoration: none;
+    color: var(--main-color);
+}
+.menu{
+    display: flex;
+}
+.menu-item{
+    list-style: none;
+    margin: 0px 15px;
+}
+.menu-item a{
+    color: var(--main-color);
+    text-decoration: none;
+    font-family: var(--main-font);
+    font-size: var(--small);
+}
+.page-wrapper__newest-stylizations{
+    margin-top: 100px;
+}
+.newest-stylizations__gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 600px;
+    gap: 30px;
+}
+.newest-stylizations__title{
+    font-family: var(--second-font);
+    font-size: var(--massive);
+    color: var(--main-color);
+    margin-bottom: 50px;
+}
+.newest-stylizations__post{
+    overflow: hidden;
+}
+.newest-stylizations__img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
