@@ -1,4 +1,4 @@
-<div class="newestnewest-stylizations page-wrapper__newest-stylizations">
+<div class="newest-stylizations page-wrapper__newest-stylizations">
     <div class="newest-stylizations__title">Najnowsze stylizacje</div>
     
     <div class="newest-stylizations__gallery">
@@ -13,4 +13,5 @@
     ?>
     
     </div>
+    <button class="button newest-stylizations__button">Zobacz inne stylizacje</button>
 </div>
