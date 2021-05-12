@@ -76,24 +76,24 @@ Text Domain: june
     color: var(--main-color);
     margin-bottom: 50px;
 }
-.post{
+.post-stylizations{
     position: relative;
     overflow: hidden;
 }
-.post:hover .post__title{
+.post-stylizations:hover .post-stylizations__title{
     opacity: 1;
 }
-.post:hover .post__img{
+.post-stylizations:hover .post-stylizations__img{
     opacity: 1;
 }
-.post__img{
+.post-stylizations__img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     opacity: 0.5;
     transition: all .3s ease;
 }
-.post__title {
+.post-stylizations__title {
     position: absolute;
     bottom: 0;
     height: 50px;
@@ -115,7 +115,56 @@ Text Domain: june
     padding: 20px 40px;
     font-family: var(--main-font);
     font-size: var(--small);
+    color: var(--main-color);
+    text-decoration: none;
+}
+.button--small{
+    font-size: var(--tiny);
+    padding: 10px 20px;
 }
 .newest-stylizations__button{
     margin: 50px 0px auto auto;
+}
+.posts-list__button{
+    margin: 0px 0px 0px auto;
+}
+.posts-list{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.posts-list__title{
+    font-family: var(--second-font);
+    font-size: var(--large);
+    color: var(--main-color);
+    margin-bottom: 50px;
+}
+.posts-list__post{
+    margin-bottom: 50px;
+}
+.posts-list__post:last-child{
+    margin-bottom: 0px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+}
+.post__title{
+    font-family: var(--main-font);
+    font-size: var(--medium);
+    color: var(--main-color);
+    text-align: left;
+    margin-bottom: 25px;
+}
+.post__excerpt{
+    font-family: var(--main-font);
+    font-size: var(--small);
+    color: var(--main-color);
+    text-align: justify;
+}
+.post__read-more{
+    font-family: var(--main-font);
+    font-size: var(--tiny);
+    color: var(--main-color);
+    margin: 0px 0px 0px auto;
 }

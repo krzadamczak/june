@@ -1,3 +1,8 @@
+<?php
+    $stylizations_id = get_cat_ID('stylizacje');
+    $stylizations_link = get_category_link($stylizations_id);
+?>
+
 <div class="newest-stylizations page-wrapper__newest-stylizations">
     <div class="newest-stylizations__title">Najnowsze stylizacje</div>
     
@@ -13,5 +18,5 @@
     ?>
     
     </div>
-    <button class="button newest-stylizations__button">Zobacz inne stylizacje</button>
+    <a href="<?php echo esc_url($stylizations_link) ?>" class="button newest-stylizations__button">Zobacz inne stylizacje</a>
 </div>

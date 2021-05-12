@@ -8,6 +8,8 @@ get_template_part('template-parts/site-header');
 
 get_template_part('template-parts/newest-stylizations');
 
+get_template_part('template-parts/posts-list');
+
 ?>
 </body>
 </html>
