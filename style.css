@@ -161,10 +161,11 @@ Text Domain: june
     font-size: var(--small);
     color: var(--main-color);
     text-align: justify;
+    line-height: 1.5;
 }
 .post__read-more{
     font-family: var(--main-font);
     font-size: var(--tiny);
     color: var(--main-color);
-    margin: 0px 0px 0px auto;
+    margin: 25px 0px 0px auto;
 }
