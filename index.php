@@ -1,15 +1,17 @@
 <?php get_header(); ?>
 
 <body <?php body_class('page-wrapper'); ?>>
-
-<?php 
-
+<?php
 get_template_part('template-parts/site-header');
-
 get_template_part('template-parts/newest-stylizations');
-
-get_template_part('template-parts/posts-list');
-
 ?>
+
+<div class="page-wrapper__inner">
+    <?php 
+    get_template_part('template-parts/posts-list');
+    get_template_part('template-parts/stylizations-by-season');
+    ?>
+</div>
+
 </body>
 </html>
