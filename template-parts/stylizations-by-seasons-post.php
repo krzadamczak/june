@@ -15,6 +15,7 @@
 ?>
 
 <div class="seasons-gallery__post">
+    <div class="seasons-gallery__mask"></div>
     <img class="seasons-gallery__img" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" srcset="">
-    <!-- <div class="post-stylizations__tag"><?php echo $tag_name ?></div> -->
+    <div class="seasons-gallery__tag"><?php echo $tag_name ?></div>
 </div>

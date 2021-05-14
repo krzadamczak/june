@@ -8,7 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: june
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
 :root{
     --main-font: 'Cabin';
@@ -19,6 +19,9 @@ Text Domain: june
     --large: 48px;
     --massive: 72px;
     --main-color: #000;
+    --secondary-color: #fff;
+    --regular: 400;
+    --bold: 700;
 }
 
 *{
@@ -78,39 +81,43 @@ Text Domain: june
 .newest-stylizations__title{
     font-family: var(--second-font);
     font-size: var(--massive);
+    font-weight: var(--bold);
     color: var(--main-color);
     margin-bottom: 50px;
 }
 .post-stylizations{
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .post-stylizations:hover .post-stylizations__title{
     opacity: 1;
 }
-.post-stylizations:hover .post-stylizations__img{
-    opacity: 1;
+.post-stylizations:hover .post-stylizations__mask{
+    opacity: 0.6;
+}
+.post-stylizations__mask{
+    background-color: #2D2D4E;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all .3s ease;
 }
 .post-stylizations__img{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: 0.5;
-    transition: all .3s ease;
 }
 .post-stylizations__title {
     position: absolute;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    line-height: 50px;
-    text-align: center;
-    background-color: #fff;
-    font-family: "Cabin";
-    font-size: 24px;
+    font-family: var(--main-font);
+    font-weight: var(--bold);
+    font-size: var(--small);
+    color: var(--secondary-color);
+    text-transform: uppercase;
     opacity: 0;
     transition: all .3s ease;
 }
@@ -122,6 +129,9 @@ Text Domain: june
     font-size: var(--small);
     color: var(--main-color);
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 1px;
 }
 .button--small{
     font-size: var(--tiny);
@@ -142,6 +152,7 @@ Text Domain: june
 .posts-list__title{
     font-family: var(--second-font);
     font-size: var(--large);
+    font-weight: var(--bold);
     color: var(--main-color);
     margin-bottom: 50px;
 }
@@ -172,6 +183,9 @@ Text Domain: june
 .post__read-more{
     font-family: var(--main-font);
     font-size: var(--tiny);
+    font-weight: var(--bold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: var(--main-color);
     margin: 25px 0px 0px auto;
     text-decoration: none;
@@ -187,18 +201,38 @@ Text Domain: june
     gap: 25px;
 }
 .seasons-gallery__post{
+    position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seasons-gallery__mask{
+    position: absolute;
+    background-color: #2D2D4E;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: all .3s ease;
 }
 .seasons-gallery__img{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: 0.5;
-    transition: all .3s ease;
+}
+.seasons-gallery__tag{
+    position: absolute;
+    font-family: var(--main-font);
+    font-weight: var(--bold);
+    font-size: var(--small);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    opacity: 1;
 }
 .stylizations-by-seasons__title{
     font-family: var(--second-font);
     font-size: var(--large);
+    font-weight: var(--bold);
     color: var(--main-color);
     margin-bottom: 50px;
 }
