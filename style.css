@@ -10,6 +10,8 @@ Text Domain: june
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
+/* Zmienne */
+/* -------------------------------- */
 :root{
     --main-font: 'Cabin';
     --second-font: 'Playfair Display';
@@ -22,8 +24,8 @@ Text Domain: june
     --secondary-color: #fff;
     --regular: 400;
     --bold: 700;
+    --gallery-gap: 25px;
 }
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -37,6 +39,9 @@ Text Domain: june
     justify-content: space-between;
     margin-top: 250px;
 }
+
+/* Header */
+/* -------------------------------- */
 .header{
     display: flex;
     padding: 15px 0;
@@ -49,56 +54,70 @@ Text Domain: june
     text-decoration: none;
     color: var(--main-color);
 }
+
+/* Menu */
+/* -------------------------------- */
 .menu{
     display: flex;
 }
-.menu-item{
+.menu__item{
     list-style: none;
     margin: 0px 30px;
 }
-.menu-item a{
+.menu__anchor{
     color: var(--main-color);
     text-decoration: none;
     font-family: var(--main-font);
+}
+.menu__anchor--header-menu{
     font-size: var(--small);
 }
-.menu-item:last-child {
+.menu__anchor--footer-menu{
+    font-size: var(--tiny);
+}
+.menu__item:last-child {
     margin-right: 0px;
 }
-.page-wrapper__newest-stylizations{
-    margin-top: 100px;
-}
-.newest-stylizations{
+
+/* Latest-stylizations */
+/* -------------------------------- */
+.latest-stylizations{
     display: flex;
     flex-direction: column;
 }
-.newest-stylizations__gallery{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    height: 600px;
-    gap: 30px;
-}
-.newest-stylizations__title{
+.latest-stylizations__header{
     font-family: var(--second-font);
     font-size: var(--massive);
     font-weight: var(--bold);
     color: var(--main-color);
     margin-bottom: 50px;
 }
-.post-stylizations{
+.page-wrapper__latest-stylizations{
+    margin-top: 100px;
+}
+
+/* Hero-gallery */
+/* -------------------------------- */
+.hero-gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 80%;
+    gap: var(--gallery-gap);
+}
+.hero-gallery__post{
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.post-stylizations:hover .post-stylizations__title{
+.hero-gallery__post:hover .hero-gallery__title{
     opacity: 1;
 }
-.post-stylizations:hover .post-stylizations__mask{
+.hero-gallery__post:hover .hero-gallery__mask{
     opacity: 0.6;
 }
-.post-stylizations__mask{
+.hero-gallery__mask{
     background-color: #2D2D4E;
     width: 100%;
     height: 100%;
@@ -106,12 +125,12 @@ Text Domain: june
     opacity: 0;
     transition: all .3s ease;
 }
-.post-stylizations__img{
+.hero-gallery__img{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.post-stylizations__title {
+.hero-gallery__title {
     position: absolute;
     font-family: var(--main-font);
     font-weight: var(--bold);
@@ -121,6 +140,9 @@ Text Domain: june
     opacity: 0;
     transition: all .3s ease;
 }
+
+/* Button */
+/* -------------------------------- */
 .button{
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid var(--main-color);
@@ -137,31 +159,36 @@ Text Domain: june
     font-size: var(--tiny);
     padding: 10px 20px;
 }
-.newest-stylizations__button{
+.latest-stylizations__button{
     margin: 50px 0px auto auto;
 }
-.posts-list__button{
+.latest-articles__button{
     margin: 0px 0px 0px auto;
 }
-.posts-list{
-    max-width: 35%;
+
+/* Latest-articles */
+/* -------------------------------- */
+.latest-articles{
     display: flex;
     flex-direction: column;
-    margin-right: 250px;
+    width: 40%;
 }
-.posts-list__title{
+.latest-articles__header{
     font-family: var(--second-font);
     font-size: var(--large);
     font-weight: var(--bold);
     color: var(--main-color);
     margin-bottom: 50px;
 }
-.posts-list__post{
+.latest-articles__post{
     margin-bottom: 50px;
 }
-.posts-list__post:last-child{
+.latest-articles__post:last-child{
     margin-bottom: 0px;
 }
+
+/* Post */
+/* -------------------------------- */
 .post{
     display: flex;
     flex-direction: column;
@@ -194,9 +221,12 @@ Text Domain: june
     margin-left: 15px;
     content: ">>>";
 }
+
+/* Seasons-gallery */
+/* -------------------------------- */
 .seasons-gallery{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     height: 80%;
     gap: 25px;
 }
@@ -229,10 +259,21 @@ Text Domain: june
     text-transform: uppercase;
     opacity: 1;
 }
+
+.stylizations-by-seasons{
+    width: 40%;
+}
 .stylizations-by-seasons__title{
     font-family: var(--second-font);
     font-size: var(--large);
     font-weight: var(--bold);
     color: var(--main-color);
     margin-bottom: 50px;
+}
+
+/* Footer */
+/* -------------------------------- */
+.footer{
+    display: flex;
+    justify-content: space-between;
 }
