@@ -110,6 +110,8 @@ Text Domain: june
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    cursor: pointer;
 }
 .hero-gallery__post:hover .hero-gallery__title{
     opacity: 1;
@@ -236,6 +238,8 @@ Text Domain: june
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    cursor: pointer;
 }
 .seasons-gallery__mask{
     position: absolute;
@@ -276,4 +280,9 @@ Text Domain: june
 .footer{
     display: flex;
     justify-content: space-between;
+}
+.footer__copyright{
+    font-family: var(--main-font);
+    font-size: var(--tiny);
+    color: var(--main-color);
 }
