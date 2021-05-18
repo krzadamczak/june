@@ -41,4 +41,23 @@ function bemit_nav_menu_css_class( $classes, $item, $args, $depth ) {
 
 register_nav_menu('header-menu', 'Główne menu');
 register_nav_menu('footer-menu', 'Menu w stopce');
+
+function create_posttype() {
+  register_post_type( 'stylizacje',
+
+  array(
+    'labels' => array(
+     'name' => __( 'Stylizacje' ),
+     'singular_name' => __( 'Stylizacja' )
+    ),
+    'public' => true,
+    'has_archive' => false,
+    'rewrite' => array('slug' => 'Stylizacje'),
+    'show_in_rest' => true,
+    'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
+   )
+  );
+  }
+
+  add_action( 'init', 'create_posttype' );
 ?>

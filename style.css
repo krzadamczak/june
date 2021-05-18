@@ -9,18 +9,20 @@ Text Domain: june
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Open+Sans&family=Roboto&display=swap');
 
 /* Zmienne */
 /* -------------------------------- */
 :root{
-    --main-font: 'Cabin';
-    --second-font: 'Playfair Display';
+    --main-font: 'Noto Sans';
+    --second-font: 'Noto Serif';
     --tiny: 18px;
     --small: 24px;
     --medium: 36px;
     --large: 48px;
     --massive: 72px;
     --main-color: #000;
+    --main-color-lighter: #525252;
     --secondary-color: #fff;
     --regular: 400;
     --bold: 700;
@@ -205,7 +207,7 @@ Text Domain: june
 .post__excerpt{
     font-family: var(--main-font);
     font-size: var(--small);
-    color: var(--main-color);
+    color: var(--main-color-lighter);
     text-align: justify;
     line-height: 1.5;
 }
